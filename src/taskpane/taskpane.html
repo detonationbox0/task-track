@@ -21,34 +21,32 @@
 </head>
 
 <body class="ms-font-m ms-welcome ms-Fabric">
-    <header class="ms-welcome__header ms-bgColor-neutralLighter">
-        <img width="90" height="90" src="../../assets/logo-filled.png" alt="Contoso" title="Contoso" />
-        <h1 class="ms-font-su">Welcome</h1>
-    </header>
-    <section id="sideload-msg" class="ms-welcome__main">
-        <h2 class="ms-font-xl">Please sideload your add-in to see app body.</h2>
-    </section>
-    <main id="app-body" class="ms-welcome__main" style="display: none;">
-        <h2 class="ms-font-xl"> Discover what Office Add-ins can do for you today! </h2>
-        <ul class="ms-List ms-welcome__features">
-            <li class="ms-ListItem">
-                <i class="ms-Icon ms-Icon--Ribbon ms-font-xl"></i>
-                <span class="ms-font-m">Achieve more with Office integration</span>
-            </li>
-            <li class="ms-ListItem">
-                <i class="ms-Icon ms-Icon--Unlock ms-font-xl"></i>
-                <span class="ms-font-m">Unlock features and functionality</span>
-            </li>
-            <li class="ms-ListItem">
-                <i class="ms-Icon ms-Icon--Design ms-font-xl"></i>
-                <span class="ms-font-m">Create and visualize like a pro</span>
-            </li>
-        </ul>
-        <p class="ms-font-l">Modify the source files, then click <b>Run</b>.</p>
-        <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
-            <span class="ms-Button-label">Run</span>
+
+    <div id="container">
+        <div  class="area" id="project-group-area">
+            <p>Project Group</p>
+            <select name="project-groups" id="sel-project-groupss"></select>
+            <div class="area-buttons">
+                <button class="btn" id="pg-add">Add</button><button class="btn" id="pg-rem">Remove</button>
+            </div>
         </div>
-    </main>
+        <div  class="area" id="project-area">
+            <p>Project</p>
+            <select name="projects" id="sel-projects" disabled></select>
+            <div class="area-buttons"></div>
+                <button class="btn" id="p-add">Add</button><button id="p-rem">Remove</button><button id="p-com">Mark Complete</button>
+            </div>
+
+        </div>
+        <div  class="area" id="task-area">
+            <p>Task</p>
+            <select name="projects" id="sel-projects" disabled></select>
+            <div class="area-buttons"></div>
+                <button class="btn" id="t-add">Add</button><button class="btn" id="t-start">Start</button><button class="btn" id="t-stop">Stop</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

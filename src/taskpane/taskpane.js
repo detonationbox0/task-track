@@ -12,18 +12,39 @@ import "../../assets/icon-80.png";
 
 Office.onReady((info) => {
   if (info.host === Office.HostType.Excel) {
-    document.getElementById("sideload-msg").style.display = "none";
-    document.getElementById("app-body").style.display = "flex";
-    document.getElementById("run").onclick = run;
+    // document.getElementById("sideload-msg").style.display = "none";
+    // document.getElementById("app-body").style.display = "flex";
+
+    // Load Project Groups
+    loadProjectGroups();
+
+
+
   }
 });
+
+
+export async function loadProjectGroups() {
+  try {
+    await Excel.run(async (context) => {
+      
+      console.log("Executing...")
+
+     
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
 
 export async function run() {
   try {
     await Excel.run(async (context) => {
-      /**
-       * Insert your Excel code here
-       */
+      
+
+
       const range = context.workbook.getSelectedRange();
 
       // Read the range address
